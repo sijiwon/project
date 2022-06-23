@@ -1,0 +1,337 @@
+* {
+  margin:0;
+  padding:0;
+}
+
+/*폰트*/
+@font-face {
+    font-family: 'KOHINanum';
+    font-weight: 300;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/kohi/KOHINanumLight.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/kohi/KOHINanumLight.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/kohi/KOHINanumLight.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/kohi/KOHINanumLight.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/kohi/KOHINanumLight.ttf') format("truetype");
+    font-display: swap;
+}
+@font-face {
+    font-family: 'KOHINanum';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/kohi/KOHINanumBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/kohi/KOHINanumBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/kohi/KOHINanumBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/kohi/KOHINanumBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/kohi/KOHINanumBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+html {
+   font-size: 10px;
+   min-width : 480px;
+}
+
+body {
+  font-family: 'KOHINanum';
+  font-weight : bold;
+  width : auto;
+  text-align: center;
+}
+
+input, button, select, option, textarea{
+  font-family: 'KOHINanum';
+}
+
+ul {
+	list-style-type: none;
+	/*list-style: none;	*/
+}
+
+a {
+  text-decoration-line : none;
+}
+
+input:focus {
+	outline : none;
+}
+
+textarea:focus {
+	outline : none;
+}
+
+.clear { /*float right, left 취소*/
+	clear:both;
+}
+
+/* wrapper 푸더 하단 고정 */
+#wrap {
+  height : auto;
+  min-height : 80vh;
+  position : relative;
+  width : 100%;
+  padding-bottom : 100px;
+  border-bottom : 1px solid #707070;
+}
+
+/*헤더*/
+header {
+  height: 93px;
+  position: relative;
+  margin : 0 auto;
+  max-width : 1680px;
+  background-color : white;
+}
+
+header div{
+  display: inline-block;
+  position: absolute;
+  top:35px;
+}
+
+/*로고*/
+.logo_header {
+  position: absolute;
+  left:6%;
+}
+
+/*검색창*/
+.search_header {
+  width : 488px;
+  position: absolute;
+  border-bottom: 1px solid #707070;
+  text-align: left;
+  margin : auto; /*중앙으로*/
+  margin-top:15px;
+  margin-left: -210px; /*시작위치 조정*/
+}
+
+.search_text {
+    font-size:1.7rem;
+	font-weight : none;
+    width: 483px;
+    text-align: center;
+    border : none;
+    height : 26px;
+    outline: none;
+}
+
+.search_img {
+  position: absolute;
+  right : 15px;
+  text-align: right;
+}
+
+/*상단 로그인*/
+.login_header {
+  position: absolute;
+  right: 8vw;
+  font-size: 1.7rem;
+  margin-top:20px;
+}
+
+.header_right {
+  cursor : pointer;
+  color : #707070;
+  transition: all .2s ease-out;
+}
+
+/*로그인 링크*/
+.header_right:link {
+	color : #7d7d7d;
+}
+.header_right:visited{ /*순서 주의*/
+	color : #7d7d7d;
+}
+.header_right:hover{
+	color : #000;
+}
+.header_right:active{
+	color : #333;
+}
+
+/*캠퍼스 채팅*/
+.campus_chat_header {
+  position: absolute;
+  right: 18vw;
+  font-size: 1.7rem;
+  margin-top:20px;
+  display : none;
+  visibility : hidden;
+}
+
+#burger_chat {
+  display : none;
+  visibility : hidden;
+}
+
+/*GNB (nav)*/
+.GNB {
+  display : block;
+  width : 100%;
+  height : 64.5px;
+  font-size: 2.0rem;
+  border : 2px 0px;
+  border-top : 2px solid rgba(0, 0, 0, .12);
+  border-bottom : 2px solid rgba(0, 0, 0, .12);
+  background-color: white;
+}
+
+.GNB_wrap{
+	display : inline-block;
+	width : 80%;
+	height : 100%;
+	max-width : 1380px;
+}
+
+.GNB_wrap li{
+	float : left;/*li 수평정렬*/
+	padding-top : 21px;
+	margin-right : 40px;
+}
+
+.GNB_wrap a {
+	transition-duration: .2s;
+}
+
+/*GNB 링크*/
+.GNB_wrap a:link {
+	color : black;
+}
+.GNB_wrap a:visited{ /*순서 주의*/
+	color : black;
+}
+.GNB_wrap a:hover{
+	color : #007EFF;
+}
+.GNB_wrap a:active{
+	color : #0064C9;
+}
+
+.GNB_right {
+	padding-top : 21px;
+	float : right;
+}
+
+/*판매하기 버튼*/
+.sale_btn {
+	font-size: 2.5rem;
+	cursor: pointer;
+	background-color : #007EFF;
+	color : #fff;
+	width : 160px;
+	height : 44px;
+	padding-top : 23px;
+}
+
+/*푸터*/
+
+#footer_content {
+	width : 83%;
+	height : 240px;
+	background-color : white;
+	position : relative;
+	bottom : 0px;
+	text-align : left;
+	max-width : 1380px;
+	margin : 0 auto;
+	color : #656565;
+	font-weight : bold;
+	margin-top : 30px;
+}
+
+.logo_footer {
+  margin-bottom : 6px;
+}
+
+.title_footer {
+  font-size: 2.4rem;
+  margin-bottom: 40px;
+}
+
+.studentID {
+  display : inline-block;
+  font-size: 2.0rem;
+  margin-bottom: 20px;
+}
+
+footer a {
+  transition: all .15s ease-out;
+  color : #007FFF;
+}
+/*멤버찾기 링크*/
+footer a:link {
+	color : #007FFF;
+}
+footer a:visited{ /*순서 주의*/
+	color : #007FFF;
+}
+footer a:hover{
+	color : #0069d3;
+}
+footer a:active{
+	color : #71b8ff;
+}
+
+footer nav {
+	font-size : 2.0rem
+}
+
+/* 개인정보처리방침 privacy policy*/
+.privacyPolicy {
+  margin-right: 27px;
+}
+
+/*이용약관 Terms of service*/
+.tos {
+
+}
+
+/* 반응형 */
+/* 큰 데스크탑 */
+@media screen and (max-width:1440px) {
+
+}
+
+
+@media screen and (max-width:1200px) {
+	/*푸터*/
+  footer nav {font-size : 1.8rem}
+  .studentID {font-size : 1.8rem;}
+    /*폰트사이즈*/
+  .item_name {font-size : 1.8rem;}
+  .item_price {font-size : 1.6rem;top : 26px;}
+}
+
+
+@media screen and (max-width : 1100px) {
+	/*상단*/
+  .GNB_wrap,
+  .login_header
+  {display: none; visibility:hidden;}
+  .search_header {top:100px;}
+	/*메인*/
+
+}
+/* 데스크탑 */
+@media screen and (max-width : 1023px) {
+	.enter {display : block;}
+}
+/*타블렛*/
+@media screen and (max-width : 767px) {
+	.search_header {margin-left:-44%; width : 88%;}
+	.search_text {width : 100%; font-size : 1.4rem;}
+	/*푸터*/
+	.logo_footer img { width : 134.5px; height : 100%;}
+	footer nav {font-size : 1.4rem; margin-top : 33px;}
+	.title_footer {font-size : 1.6rem}
+	.studentID {font-size : 1.2rem;}
+	.enter2 {display : block;}
+	  /*폰트사이즈*/
+	.item_name {font-size : 1.4rem; top : 14px;}
+	.item_price {font-size : 1.2rem;top : 27px;}
+}
+/*모바일*/
+@media screen and (max-width : 480px) {
+
+}

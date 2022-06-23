@@ -1,0 +1,402 @@
+/*캠퍼스 채팅*/
+#chatting_wrap {
+	width : 80%;
+	max-width : 1380px;
+	margin : 0 auto;
+	margin-top : 50px;
+	text-align : left;
+	font-size : 1.8rem;
+}
+
+/*사용자 선택 부분*/
+#user_list_wrap {
+	display : inline-block;
+	width : 40%;
+	height : 700px;
+	border : solid 1px #707070;
+	color : #505050;
+	line-height: 100px;
+
+}
+
+.user_list {
+	overflow : auto;
+	height : 500px;
+}
+
+.user_list li{
+	height : 100px;
+	border-bottom : solid 1px #707070;
+	cursor : pointer;
+}
+
+/*프로필*/
+.user_profile {
+	display : inline-block;
+	width : 60px;
+	height : 60px;
+	vertical-align : middle;
+	margin : 0px 30px;
+}
+
+.user_profile img{
+	display : block;
+	width :100%;
+	height : 100%;
+	object-fit:cover;
+	border-radius : 100%;
+	box-shadow : 0px 0px 3px #cecece;
+}
+
+/*채팅 내역 부분*/
+#chat_view {
+	display : inline-block;
+	width : 58%;
+	height : 700px;
+	border : solid 1px #707070;
+	float : right;
+	position : relative;
+	text-align : center;
+}
+
+/*상대방 선택되기 전*/
+.chatting_default {
+	display : inline-block;
+	width : 163px;
+	height : 146px;
+	position : relative;
+	top : 258px;
+}
+
+.chatting_default img{
+	display : block;
+	width :100%;
+	height : 100%; /*원본 비율 유지*/
+	object-fit:cover; /*이미지 크기 딱 맞도록*/
+}
+
+.chatting_default_text {
+	color : #b8b8b8;
+	position : relative;
+	top : 278px;
+}
+
+/*상대방 선택된 후*/
+/*위쪽(프로필, 더보기)*/
+.chatting_view_top {
+	height : 100px;
+	text-align : left;
+	line-height: 100px;
+	border-bottom : solid 1px #707070;
+	font-size : 2.4rem;
+}
+
+.more-check {display: none;visibility: hidden;}
+.more_menu {display: none;visibility: hidden; margin-bottom: 50px;} /* 햄버거 메뉴 안보이게 */
+
+.more_menu {
+  position: absolute;
+  top : 50px;
+  right : 80px;
+  height: 135px;
+  max-height: 0;
+  transition: 0.5s ease;
+  z-index: 2;
+  background-color: #fff;
+  display : inline-block;
+  visibility : hidden;
+  width : 171px;
+  text-align : left;
+  overflow: hidden; /*가로 스크롤 삭제*/
+  white-space:nowrap; /*텍스트 줄바꿈 금지*/
+  border : solid 2px #707070;
+  border-radius : 15px 0px 15px 15px;
+}
+
+.more-icon {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  float : right;
+  top : 35px;
+  right : 35px;
+  z-index: 1;
+  user-select: none;
+  width: auto;
+  margin: 0;
+}
+
+.more-icon .more-circle {
+  background: #707070;
+  display: block;
+  height: 8px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 8px;
+  border-radius : 100%;
+}
+
+.more-icon .more-circle:before,
+.more-icon .more-circle:after {
+  background: #707070;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+  border-radius : 100%;
+}
+
+.more-icon .more-circle:before {
+  top: 13px;
+}
+
+.more-icon .more-circle:after {
+  top: -13px;
+}
+
+.more-check {
+  display: none;
+}
+
+.more-check:checked~.more_menu {
+  max-height:135px;
+  visibility : visible;
+}
+
+.more-check:checked~.more-icon .more-circle,
+.more-check:checked~.more-icon .more-circle:before,
+.more-check:checked~.more-icon .more-circle:after {
+  background : #cecece;
+}
+
+
+/*더보기 메뉴*/
+.more_wrap{
+    position: absolute;
+	margin-top : -15px;
+	margin-left : 20px;
+	font-size : 1.7rem;
+	line-height: 0.8rem;
+}
+.more_wrap li{
+	margin-top: 35px;
+    list-style: none;
+	text-align : left;
+	font-size : 1.7rem;
+	cursor : pointer;
+}
+.more_wrap a{
+    display: inline-block;
+    color: #707070;
+    text-decoration: none;
+}
+
+/*더보기 옵션*/
+.more_options a, .more_options span{
+	transition-duration: .2s;
+}
+
+.more_options a:link,
+.more_options a:visited,
+.more_options span:visited {
+	color : #000;
+}
+
+.more_options a:hover,
+.more_options span:hover{
+	color : #7d7d7d;
+}
+.more_options a:active,
+.more_options span:active{
+	color : #333;
+}
+
+/*채팅 메인*/
+.chatting_view_main {
+	text-align : left;
+	width : 100%;
+	height : 480px;
+	overflow : auto;
+	font-size : 1.6rem;
+}
+
+/*채팅부분 프로필 사진 위치 조정*/
+.chat_profile {
+	margin : 0 30px;
+}
+
+/*말풍선*/
+.speech_balloon {
+	display : inline-block;
+}
+
+.speech_balloon .other_user_chat, .speech_balloon .my_chat{
+	padding : 11px 18px;
+	margin-bottom : 15px;
+}
+
+/*첫 채팅, 게시글 링크*/
+.first_chat {
+	text-align: center;
+	padding : 3px 8px;
+	color : black;
+	background-color : white;
+	border-radius: 10px;
+}
+
+/*상대방 채팅*/
+.chatting_left {
+	width : 100%;
+	text-align : left;
+	margin-top : 30px;
+}
+
+.other_user_chat_wrap {
+	position : relative;
+	vertical-align : top;
+	top : 30px;
+	max-width : 400px;
+}
+
+.other_user_chat {
+	display : inline-block;
+	background-color : #c8dbf1;
+	color : #007fff;
+	border-radius : 0px 15px 15px 15px;
+}
+
+/*입력된 시간*/
+.chat_regtime {
+	vertical-align : bottom;
+	position : relative;
+	top : 15px;
+	font-size: 10px;
+	color : #6f6f6f;
+	text-align : center;
+	margin : 0 5px;
+}
+
+/*본인 채팅*/
+.chatting_right {
+	width : 100%;
+	text-align : right;
+	border-radius : 15px 0px 15px 15px;
+}
+
+.my_chat_wrap {
+	position : relative;
+	top : 30px;
+	max-width : 400px;
+}
+
+.my_chat{
+	display : inline-block;
+	background-color : #007fff;
+	color : white;
+	border-radius : 15px 0px 15px 15px;
+	margin-right : 40px;
+	text-align : left;
+}
+
+
+
+/*채팅 입력, 전송 버튼 부분*/
+.msg_write {
+	width : 100%;
+	height : 120px;
+	border-top : solid 1px #707070;
+	text-align : center;
+}
+
+/*채팅 입력*/
+.textarea_msg {
+	font-size : 2rem;
+	margin-top : 20px;
+	text-align : left;
+	width : 94%;
+	resize: none;
+	border : none;
+}
+
+/*메세지 전송, 글자수*/
+.msg_write_bottom {
+	text-align : right;
+	position : relative;
+	right : 30px;
+}
+
+#msg_submit {
+	border : none;
+	background-color : #c4c4c4;
+	font-size : 2rem;
+	padding : 8px 22px;
+	border-radius: 6px;
+	color : white;
+	cursor : default;
+}
+
+.text_limit {
+	vertical-align : bottom;
+	font-size : 1.8rem;
+	color : #c4c4c4;
+	margin-right : 15px;
+}
+
+.text_limit input {
+	text-align : right;
+	border : none;
+	font-size : 1.8rem;
+	color : #c4c4c4;
+	margin-right : 3px;
+	font-weight : bold;
+	background: none;
+}
+
+
+/*사용자 리스트로 가는 버튼*/
+#chat_back_btn {
+	display : inline-block;
+	font-family: 'Gothic A1', sans-serif;
+	font-size : 5rem;
+	position : absolute;
+	margin-top : 3px;
+	margin-left : 25px;
+	cursor : pointer;
+	display : none;
+	visibility : hidden;
+}
+/* 반응형 */
+/* 큰 데스크탑 */
+@media screen and (max-width:1200px) {
+	#chatting_wrap {width : 90%;}
+}
+@media screen and (max-width : 1100px) {
+	#user_list_wrap {width : 100%;}
+	#chat_view {width : 100%;}
+	.user_profile {margin : 0px 15px;}
+	.my_chat {margin-right : 20px;}
+	.chat_top_profile {margin-left : 80px;}
+	#chat_back_btn {display : inline-block; visibility : visible;}
+	.msg_write {margin-top : 15px;}
+	.msg_write_bottom {right : 15px;}
+	.text_limit{margin-right : 5px;}
+
+	.chatting_view_main {font-size : 1.2rem;}
+	.textarea_msg {font-size : 1.4rem;}
+	#msg_submit {font-size : 1.6rem;}
+	.text_limit, .text_limit input {font-size : 1.4rem;}
+}
+/* 데스크탑 */
+@media screen and (max-width : 1023px) {
+}
+/*타블렛*/
+@media screen and (max-width : 767px) {
+
+
+}
+/*모바일*/
+@media screen and (max-width : 480px) {
+
+}

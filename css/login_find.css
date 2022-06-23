@@ -1,0 +1,119 @@
+/*로그인, 회원찾기*/
+#login_find_wrap{
+  text-align : left;
+  margin : 0 auto;
+  margin-top : 100px;
+  width : 536px;
+
+}
+/*로그인,찾기 제목*/
+.login_find_title {
+  font-size : 3.5rem;
+  color : #101010;
+}
+
+/*로그인, 회원찾기 정보 입력 칸*/
+.member_form .login_find_write{
+  width : 516px; /* //536px*/
+  height : 80px;
+  color : #7d7d7d;
+  margin-top : 20px;
+  border: solid 1.5px #7d7d7d;
+  font-size : 2rem;
+  padding-left : 20px;
+}
+
+/*로그인, 회원가입 버튼*/
+.login_find_btn, .find_btn{ margin-top : 30px;}
+.login_find_btn input, button{
+  display : inline-block;
+  width : 260px;
+  height : 80px;
+  font-size : 3rem;
+  color : white;
+  background-color : #007EFF;
+  border-style: none;
+  cursor : pointer;
+}
+
+/*아이디 | 비밀번호 페이지 찾기 버튼*/
+.login_find_btn button {float : right;}
+
+.find_btn input {
+  display : inline-block;
+  width : 100%;
+  height : 80px;
+  font-size : 3rem;
+  color : white;
+  background-color : #007EFF;
+  border-style: none;
+   cursor : pointer;
+}
+
+/*아이디 | 비밀번호 버튼*/
+.find_member {
+  display: inline-block;
+  float : right;
+  margin-top : 10px;
+  font-size: 1.7rem;
+  color: #7d7d7d;
+}
+
+.find_member li{
+	float : left;/*li 수평정렬*/
+  margin-left : 20px;
+}
+
+.find_member a {transition: all .2s ease-out;}
+
+/*멤버찾기 링크*/
+.find_member a:link {
+	color : #7d7d7d;
+}
+.find_member a:visited{ /*순서 주의*/
+	color : #7d7d7d;
+}
+.find_member a:hover{
+	color : #000;
+}
+.find_member a:active{
+	color : #333;
+}
+
+
+/* 반응형 */
+/* 데스크탑 */
+
+/* 반응형 */
+/* 큰 데스크탑 */
+@media screen and (max-width:1440px) {
+
+}
+
+
+@media screen and (max-width:1200px) {
+  .login_find_title{font-size : 3rem;}
+  .login_find_btn input, button{font-size : 2.4rem;}
+  .find_btn input {font-size : 2.4rem;}
+}
+
+
+@media screen and (max-width : 1100px) {
+
+  #login_find_wrap{width : 90%;}
+  .login_find_title{font-size : 2.4rem;}
+  .member_form .login_find_write{width : 96.8%; padding-left : 3%; font-size : 1.6rem;}
+  .login_find_btn input, button{width : 100%; font-size : 2rem;}
+  .login_find_btn button{margin-top : 20px; float : none;}
+  .find_member {font-size : 1.6rem;}
+  .find_btn input {font-size : 2rem;}
+}
+
+/*타블렛*/
+@media screen and (max-width : 767px) {
+
+}
+/*모바일*/
+@media screen and (max-width : 480px) {
+
+}

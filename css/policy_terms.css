@@ -1,0 +1,35 @@
+/*개인정보 처리방침, 이용약관*/
+.policy_terms_wrap {
+	text-align : left;
+	margin: 0 auto;
+	width : 80vw;
+	margin-top : 50px;
+}
+.policy_terms_title{
+	font-size : 3.5rem;
+}
+.policy_terms_text{
+	margin-top : 20px;
+	font-size : 1.7rem;
+	color : #4a4a4a;
+}
+
+
+
+/* 반응형 */
+
+/* 데스크탑 */
+@media screen and (max-width : 1023px) {
+	.policy_terms_title{font-size : 3rem}
+	.policy_terms_text{font-size : 1.6rem}
+}
+
+/*타블렛*/
+@media screen and (max-width : 767px) {
+	.policy_terms_title{font-size : 2.4rem}
+	.policy_terms_text{font-size : 1.4rem}
+}
+/*모바일*/
+@media screen and (max-width : 480px) {
+
+}

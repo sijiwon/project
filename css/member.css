@@ -1,0 +1,164 @@
+/*회원가입, 회원정보수정*/
+#member_wrap{
+  text-align : left;
+  margin : 0 auto;
+  margin-top : 50px;
+  width : 812px;
+
+}
+/*제목*/
+.member_title {
+  font-size : 3.5rem;
+  color : #101010;
+}
+
+/*칸별로 border 적용*/
+#write_form {
+	border-bottom : solid 1px rgba(70,70,70,.48);
+}
+
+#write_form li{
+	height : 86px;
+	border-top : solid 1px rgba(70,70,70,.48);
+}
+
+/*입력 칸 공통 디자인*/
+#write_form input { 
+	font-weight : bold;
+	font-size : 1.7rem;
+	border: solid 1px #7d7d7d;
+	color : #7d7d7d;
+    margin-top : 16px;
+    height : 50px;
+	padding-left : 20px;
+}
+
+.member_form {margin-top : 20px;}
+
+/*회원가입 정보 입력 칸*/
+.member_write{
+  display : inline-block;
+  width : 80.7%;
+}
+
+/*입력 칸 설명*/
+.member_text {
+	display : inline-block;
+	margin-top : 30px;
+	font-size : 2.5rem;
+	width : 16.2%;
+}
+
+/*이메일 입력 칸*/
+.member_write_email {
+	width : 35%;
+	padding-left : 20px;
+}
+
+
+/*고정 이메일*/
+#shingu_email {
+	display : inline-block;
+	font-size : 2rem;
+	margin : 0px 1.1%;
+}
+
+/*인증번호 전송 버튼*/
+.verification_code {
+	width : 22.3%;
+	height : 50px;
+	background-color : #007EFF;
+	border-style : none;
+	color : white;
+	font-size : 2rem;
+ }
+ 
+/*동의사항*/
+.agreement {
+	margin-top : 34px;
+	text-align : center;
+	color : rgba(0,0,0,.6);
+	font-size : 1.7rem;
+	font-weight : normal;
+}
+
+.agreement input {
+	cursor : pointer;
+	background: none;
+	border-style : none;
+	font-size : 1.7rem;
+	color : rgba(0,0,0,.6);
+	text-decoration : underline;
+}
+
+/*버튼*/
+.member_btns {
+	margin-top : 50px;
+	text-align : center;}
+.member_btns input, button{
+	display : inline-block;
+	width : 160px;
+	height : 60px;
+	font-size : 2.5rem;
+	color : white;
+	border-style: none;
+	cursor : pointer;
+}
+
+/*회원가입 버튼*/
+.member_btns input{
+	background-color : #007EFF;
+}
+/*취소 버튼*/
+.member_btns button {
+	background-color : #b9b9b9;
+	margin-right : 50px;
+}
+
+/* 반응형 */
+/* 데스크탑 */
+
+/* 반응형 */
+/* 큰 데스크탑 */
+@media screen and (max-width:1440px) {
+
+}
+
+
+@media screen and (max-width:1200px) {
+
+}
+
+
+@media screen and (max-width : 1100px) {
+  #member_wrap{width : 768px;}
+  .member_title{font-size : 3rem;}
+  #write_form input{font-size : 1.6rem;}
+  .member_text {font-size : 2rem;}
+  .member_write {width : 80.5%;}
+  #shingu_email {font-size : 1.8rem;}
+  .member_btns input, button {font-size : 2rem;}
+  .member_write_email {width : 38%;}
+  .verification_code {font-size : 2rem; width : 20%;}
+}
+
+/*데스크탑*/
+@media screen and (max-width:800px) {
+  #member_wrap{width : 90%;}
+  .member_title{font-size : 2.4rem;}
+  #write_form input{font-size : 1.4rem;}
+  .member_text {font-size : 1.6rem;}
+  .member_write {width : 78%;}
+  #shingu_email {font-size : 1.8rem; position : absolute; top : 598px;right : 23%;}
+  .member_btns input, button {font-size : 2rem;}
+  .member_write_email {width : 78%;}
+  .verification_code {font-size : 1.6rem; width : 15%; height : 40px; position : absolute; top : 589px;right : 5%;}
+  #write_form #email_write {height : 111px;}
+}
+/*타블렛*/
+@media screen and (max-width:767px) {
+}
+/*모바일*/
+@media screen and (max-width : 480px) {
+
+}

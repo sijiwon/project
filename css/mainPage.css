@@ -1,0 +1,91 @@
+/*배너*/
+#banner {
+    background-color : #cecece;
+	display : inline-block;
+    list-style: none;
+    width : 100%;
+    margin : 0 auto;
+	margin-top : 50px;
+
+}
+
+#banner_wrap {
+	width : 100%;
+  height : 380px;
+	margin : 0 auto;
+	overflow-x: hidden;
+}
+
+.banner_slides {
+  display: flex;
+  transition: .5s ease-out;
+  height : 100%;
+}
+
+.banner_img {
+  display: flex; /*이미지 빈공간 삭제*/
+}
+
+.banner_img img {
+	display: flex;
+    width : 100vw;
+    height : 100%;
+	object-fit:cover; /*이미지 크기 딱 맞도록*/
+}
+
+/*배너 이미지 넘기기 버튼*/
+.slide_btn {
+  position : relative;
+  width : 100%;
+  top : -230px;
+  text-align : center;
+}
+
+#banner_left_btn {
+  position : absolute;
+  left : 6%;
+  display: flex;
+  border-style: none;
+  background: rgba(0,0,0,0.0);
+  width : 70px;
+  height : 70px;
+}
+
+#banner_left_btn img{
+  cursor : pointer;
+  display : flex;
+	width : 100%;
+	height : 100%; /*원본 비율 유지*/
+	object-fit:cover; /*이미지 크기 딱 맞도록*/
+}
+
+#banner_right_btn {
+  position : absolute;
+  right : 6%;
+  display: flex;
+  border-style: none;
+  background: rgba(0,0,0,0.0);
+  width : 70px;
+  height : 70px;
+}
+
+#banner_right_btn img{
+  cursor : pointer;
+  display : flex;
+	width : 100%;
+	height : 100%; /*원본 비율 유지*/
+	object-fit:cover; /*이미지 크기 딱 맞도록*/
+}
+
+
+/* 반응형 */
+
+@media screen and (max-width:768px) {
+	#banner_wrap{height : 24%;}
+	.slide_btn {top : -25vh;}
+}
+
+/* 데스크탑 */
+@media screen and (max-width : 375px) {
+	#banner_wrap{height : 14.6%;}
+}

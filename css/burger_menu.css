@@ -1,0 +1,137 @@
+.burger-check {display: none;visibility: hidden;}
+.menu {display: none;visibility: hidden; margin-bottom: 50px;} /* 햄버거 메뉴 안보이게 */
+/* 반응형 */
+/* 큰 데스크탑 */
+@media screen and (max-width:1200px) {
+
+}
+@media screen and (max-width : 1100px) {
+/* 일정 창 크기 되면 햄버거 메뉴 보이게 */
+/*햄버거 메뉴 출처 : https://alikong.tistory.com/34*/
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0px;
+  height: 100vh;
+  max-width: 0;
+  transition: 0.5s ease;
+  z-index: 2;
+  background-color: #fff;
+  display : inline-block;
+  visibility : visible;
+  width : 249px;
+  text-align : left;
+  overflow: hidden; /*가로 스크롤 삭제*/
+  white-space:nowrap; /*텍스트 줄바꿈 금지*/
+
+}
+
+.burger-icon {
+  cursor: pointer;
+  display: inline-block;
+  position: fixed;
+  z-index: 1;
+  padding: 8px 0;
+  top: 42px;
+  right: 0;
+  user-select: none;
+  width: auto;
+  margin: 0;
+}
+
+.burger-icon .burger-sticks {
+  background: #333;
+  display: block;
+  height: 3px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 30px;
+}
+
+.burger-icon .burger-sticks:before,
+.burger-icon .burger-sticks:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.burger-icon .burger-sticks:before {
+  top: 10px;
+}
+
+.burger-icon .burger-sticks:after {
+  top: -10px;
+}
+
+.burger-check {
+  display: none;
+}
+
+.burger-check:checked~.menu {
+  max-width: 249px;
+   box-shadow: -1px -1px 7px 1px rgba(0,0,0,.3);
+}
+
+.burger-check:checked~.burger-icon .burger-sticks {
+   background: transparent;
+   transition: all .4s ease-out;
+   transform: translateX(-230px);
+}
+
+.burger-check:checked~.burger-icon .burger-sticks:before {
+  transform:  rotate(-45deg);
+}
+
+.burger-check:checked~.burger-icon .burger-sticks:after {
+  transform: rotate(45deg);
+
+}
+
+.burger-check:checked~.burger-icon:not(.steps) .burger-sticks:before,
+.burger-check:checked~.burger-icon:not(.steps) .burger-sticks:after {
+  top: 0;
+
+}
+
+/*메뉴 안에 리스트*/
+.menu_wrap{
+    position: absolute;
+    top: 160px;
+    left: 30%;
+    margin: -82px 0 0 -35px;
+}
+.menu_wrap li{
+	margin-top: 35px;
+    list-style: none;
+	text-align : left;
+	font-size : 17px;
+}
+.menu_wrap a{
+    display: inline-block;
+    color: #707070;
+    text-decoration: none;
+}
+
+#login_burger {
+	position : absolute;
+	top : -63px;
+	right : -85px;
+}
+
+}
+/* 데스크탑 */
+@media screen and (max-width : 1023px) {
+}
+/*타블렛*/
+@media screen and (max-width : 767px) {
+
+
+}
+/*모바일*/
+@media screen and (max-width : 480px) {
+
+}

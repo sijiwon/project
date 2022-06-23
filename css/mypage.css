@@ -1,0 +1,138 @@
+/*마이페이지*/
+
+#mypage_wrap {
+	margin : 0 auto;
+	width : 75%;
+	margin-top : 50px;
+	height : 100%;
+	text-align : left;
+}
+
+/*좌측 | 회원정보 관리*/
+#mypage_member_wrap {
+	display : inline-block;
+	width : 30%;
+	border : solid 1px #707070;
+	height : 588px;
+	font-size : 2.4rem;
+	text-align : center;;
+}
+
+.profile {
+	width : 100%;
+	height : 329px;
+}
+
+.profile_img {
+	display : flex;
+	position : relative;
+	width : 150px;
+	height : 150px;
+	margin : 0 auto;
+	border : solid 1px #cecece;
+	border-radius : 100%;
+	top : 30px;
+}
+
+.profile_img img {
+	border-radius : 100%;
+}
+
+.profile p {
+	margin-top : 60px;
+
+}
+
+.mypage_link {
+	border-top: solid 1px #707070;
+	height : 86px;
+  line-height: 86px;
+}
+
+
+/*우측 | 작성한 글 리스트*/
+#mypage_list_wrap {
+	float : right;
+	display : inline-block;
+	width : 68%;
+	height : 588px;
+}
+
+.sale_list_title {
+	text-align : left;
+	font-size : 3rem;
+	margin-bottom : 10px;
+}
+
+.sale_list {
+	height : 544px;
+	border: solid 1px #707070;
+}
+
+.vertical_scroll {
+	overflow : scroll;
+	overflow : auto;
+	white-space: nowrap;
+}
+
+.sale_list li {
+  border-top : none;
+  border-bottom: solid 1px #707070;
+  height : 86px;
+  line-height: 86px;
+  font-size : 2.4rem;
+  text-align : left;
+  padding-left : 30px;
+}
+
+.mypage_link{cursor: pointer; color : #7d7d7d; transition-duration: .1s;}
+
+.mypage_link:link {
+	color : #7d7d7d;
+}
+
+.mypage_link:visited{
+	color : #7d7d7d;
+}
+.mypage_link:hover{
+	color : #007eff;
+}
+
+.mypage_link:active{
+	color : #0064C9;
+}
+
+
+
+/* 반응형 */
+/* 큰 데스크탑 */
+@media screen and (max-width:1440px) {
+}
+
+
+@media screen and (max-width:1200px) {
+
+}
+
+@media screen and (max-width : 1100px) {
+	#mypage_wrap {width : 90%;}
+	#mypage_member_wrap {height : 580px; font-size : 2rem;}
+	.profile {height : 320px;}
+	.sale_list_title {font-size : 2.5rem;}
+	.sale_list li {font-size : 1.8rem;}
+}
+/* 데스크탑 */
+@media screen and (max-width : 1023px) {
+}
+/*타블렛*/
+@media screen and (max-width : 767px) {
+	#mypage_member_wrap {height : 576px; font-size : 1.8rem;}
+	.profile {height : 320px;}
+	.sale_list_title {font-size : 2rem;}
+	.sale_list li {font-size : 1.6rem;}
+	.profile_img {width : 100px; height : 100px;}
+}
+/*모바일*/
+@media screen and (max-width : 480px) {
+
+}
