@@ -1,0 +1,49 @@
+
+db_connect.php //DB 접속 코드
+index.php // 메인 페이지    *햄버거 메뉴의 판매하기를 통해 판매하기 페이지 확인 가능, 추후 로그인 기능 활성화 시 주석처리 되어있는 코드로 변경
+​
+login_main.php // 로그인 페이지
+member_join_form.php // 회원가입 작성 페이지​
+member_join.php // 회원가입 기능
+​
+login.php // 로그인 기능
+logout.php // 로그아웃 기능
+​
+find_member_id_form.php // 아이디 찾기 작성 페이지
+find_member_pw_form.php // 비밀번호 찾기 작성 페이지​
+​
+find_member_id.php //아이디 찾기 기능, 결과 출력 페이지​
+find_member_pw.php //  비밀번호 찾기 기능, 결과 출력 페이지​, *이메일로 비밀번호 전송
+member_update_form.php // 회원 정보 수정 작성 페이지
+member_update.php // 회원 정보 수정 기능 페이지​
+​
+board_main.php // 전공/교양 교재, 실습 도구 판매글 보여주는 페이지 *bid에 따라 게시판 종류 나눔
+board_write.php // 판매글 작성 *만약 게시글 번호가 있다면 글 수정하는 페이지
+board​_insert.php // 판매글 작성한거 추가
+board​_update.php // 판매글 수정 기능
+board​_view.php //판매글 상세보기​
+​
+privacy_policy.php // 개인정보처리방침 볼 수 있는 페이지​
+terms_of_service.php // 이용약관 볼 수 있는 페이지
+​
+mypage.php // 마이페이지
+campus_chating.php // 채팅페이지
+msg_send.php //메시지 전송 기능
+
+admin 폴더 안 파일
+ad_board_update.php // 수정된 게시글 업데이트하는 기능
+ad_baord_wirte.php // 게시글 수정하는 화면
+ad_boardlist_delete.php // 게시글 삭제하는 기능
+ad_member_delete.php // 회원 삭제하는 기능
+ad_member_update_form.php // 회원정보 수정 화면
+ad_member_update.php // 회원정보 수정 실행 기능
+admin_session.php // 관리자가 아닌경우 접근 제한하는 기능
+admin.php // 관리자 페이지
+boardlist.php // 게시판 관리 화면
+db_connect.php // DB 접속 코드
+memberlist.php // 회원관리 화면
+
+​
+​
+​
+​

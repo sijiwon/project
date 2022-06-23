@@ -1,0 +1,5 @@
+https://wonpaper.tistory.com/294
+
+해당 주소 들어가서 똑같이 세팅
+SMTP Error: Could not authenticate 오류 발생 시
+PHPMailer를 사용하기 위해 필요한 설정
